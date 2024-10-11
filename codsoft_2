@@ -1,0 +1,36 @@
+# Simple Calculator Program
+
+# Function to perform the chosen operation
+def calculate(num1, num2, operation):
+    if operation == 1:  # Addition
+        return num1 + num2
+    elif operation == 2:  # Subtraction
+        return num1 - num2
+    elif operation == 3:  # Multiplication
+        return num1 * num2
+    elif operation == 4:  # Division
+        if num2 != 0:
+            return num1 / num2
+        else:
+            return "Error: Division by zero!"
+    else:
+        return "Invalid operation choice!"
+
+# User input
+print("Welcome to the simple calculator!")
+number1 = float(input("Enter the first number: "))
+number2 = float(input("Enter the second number: "))
+
+# Display operation choices
+print("Choose an operation:")
+print("1. Addition")
+print("2. Subtraction")
+print("3. Multiplication")
+print("4. Division")
+
+operation_choice = input("Enter the number of the chosen operation: ")
+
+# Perform the calculation and display the result
+result = calculate(number1, number2, operation_choice)
+print("The result is: {}".format(result))
+
